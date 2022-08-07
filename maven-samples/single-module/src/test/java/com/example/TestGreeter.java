@@ -14,19 +14,22 @@ import static org.junit.matchers.JUnitMatchers.containsString;
 public class TestGreeter {
 
   private Greeter greeter;
-
+  
+  //This is the before method
   @Before
   public void setup() {
     greeter = new Greeter();
   }
-
+  
+  //This is the first test
   @Test
   public void greetShouldIncludeTheOneBeingGreeted() {
     String someone = "World";
 
     assertThat(greeter.greet(someone), containsString(someone));
   }
-
+  
+  //This is the second test
   @Test
   public void greetShouldIncludeGreetingPhrase() {
     String someone = "World";
